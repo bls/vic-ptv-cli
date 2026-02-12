@@ -16,7 +16,7 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "ptv",
+	Use:   "vic-ptv",
 	Short: "CLI for Public Transport Victoria (PTV) Timetable API",
 	Long: `A command-line interface for the Public Transport Victoria (PTV) Timetable API v3.
 

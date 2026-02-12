@@ -7,7 +7,8 @@ before:
     - go mod tidy
 
 builds:
-  - env:
+  - binary: vic-ptv
+    env:
       - CGO_ENABLED=0
     goos:
       - linux
@@ -36,9 +37,9 @@ brews:
     description: "CLI for the Public Transport Victoria (PTV) Timetable API"
     license: "MIT"
     install: |
-      bin.install "vic-ptv-cli"
+      bin.install "vic-ptv"
     test: |
-      system "#{bin}/vic-ptv-cli", "--help"
+      system "#{bin}/vic-ptv", "--help"
 
 checksum:
   name_template: 'checksums.txt'
