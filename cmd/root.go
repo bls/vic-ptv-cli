@@ -26,6 +26,11 @@ covering trains, trams, buses, V/Line, and more.
 Data licensed from Public Transport Victoria under Creative Commons Attribution 3.0 Australia Licence.`,
 }
 
+// SetVersion sets the version info from ldflags.
+func SetVersion(version, commit, date string) {
+	rootCmd.Version = version
+}
+
 // Execute runs the root command.
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
